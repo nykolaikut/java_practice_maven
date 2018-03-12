@@ -6,7 +6,7 @@ public class Test {
         System.out.println("2 step !!!");
         System.out.println("3 step !!!");
         System.out.println("4 step !!!");
-        System.out.println("7990 step !!!");
+        System.out.println("7990   step !!!");
 
     }
 }

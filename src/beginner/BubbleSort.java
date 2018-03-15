@@ -5,7 +5,6 @@ public class BubbleSort {
         int[] array = {10,9,8,7,6,5,4,3,2,1};
         printArray(array);
         sortArray(array);
-        System.out.println();
         printArray(array);
     }
 
@@ -24,10 +23,12 @@ public class BubbleSort {
         }
     }
 
-    private static void printArray(int[] array){
+    public static void printArray(int[] array){
+        System.out.print("{");
         for (int ar: array) {
-            System.out.print(ar + " ");
+            System.out.print(ar + ", ");
         }
+        System.out.println("}");
     }
 
 }

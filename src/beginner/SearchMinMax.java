@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class SearchMinMax {
     public static void main(String[] args){
-        int[] array =createArray(20);
+        int[] array = createArray(20);
         int min = array[0];
         int max = array[0];
         BubbleSort.printArray(array);

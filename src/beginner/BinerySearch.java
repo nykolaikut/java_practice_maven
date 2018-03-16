@@ -16,9 +16,9 @@ public class BinerySearch {
         for (int ar: checkArray) {
             ind = searcIndexArray(ar,array);
             if (ind < 0) {
-                System.out.println(ar+" is not found into the array.");
+                System.out.println(ar+" is not found in the array.");
             } else
-                System.out.println("There is "+ar+" into the array.   ["+ind+"]");
+                System.out.println("There is "+ar+" in the array.   ["+ind+"]");
         }
     }
 

@@ -5,8 +5,8 @@ import java.util.Random;
 public class SearchMinMax {
     public static void main(String[] args){
         int[] array = createArray(20);
-        int min = array[0];
-        int max = array[0];
+        int min, max;
+        min = max = array[0];
         BubbleSort.printArray(array);
         System.out.println();
 
@@ -17,7 +17,7 @@ public class SearchMinMax {
         System.out.println(" min = " + min+"; max = " + max);
     }
 
-    private static int[] createArray(int dimension){
+    public static int[] createArray(int dimension){
         int[] temp = new int[dimension];
         Random r = new Random();
         for(int i=0; i< temp.length; i++){

@@ -1,16 +1,18 @@
 package beginner;
 
+import java.util.Arrays;
+
 public class BinerySearch {
 
     public static void main(String[] args) {
 
         int[] array = createArray(25);
-        BubbleSort.printArray(array);
+        System.out.println(Arrays.toString(array));
 
         /* checking values */
         int[] checkArray = {array[0]-1,array[0],array[(array.length/2)],array[array.length-1],array[array.length-1]+1};
         System.out.print(" checking values ");
-        BubbleSort.printArray(checkArray);
+        System.out.println(Arrays.toString(checkArray));
 
         int ind;
         for (int ar: checkArray) {

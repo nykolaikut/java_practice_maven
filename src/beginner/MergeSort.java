@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MergeSort {
     public static void main(String[] args){
 
-        int dimensionOfArray = 10;
+        int dimensionOfArray = 15;
         int[] array = SearchMinMax.createArray(dimensionOfArray);
 
         System.out.println("Before "+ Arrays.toString(array));
@@ -24,33 +24,37 @@ public class MergeSort {
 //        System.out.println(" Left "+Arrays.toString(Arrays.copyOfRange(array, 0, mid)));
 //        System.out.println(" Right "+Arrays.toString(Arrays.copyOfRange(array, mid, len)));
 
-        return merge(mergeSort(Arrays.copyOfRange(array, 0, mid)),
-                mergeSort(Arrays.copyOfRange(array, mid, len)));
+        int[] leftArray = mergeSort(Arrays.copyOfRange(array, 0, mid));
+        int[] rightArray = mergeSort(Arrays.copyOfRange(array, mid, len));
+
+        return merge(leftArray,rightArray);
     }
 
-    private static int[] merge(int[] arr_1, int[] arr_2) {
+    private static int[] merge(int[] leftArr, int[] rightArr) {
 
-//        System.out.println(" merge ");
-//        System.out.println(Arrays.toString(arr_1));
-//        System.out.println(Arrays.toString(arr_2));
+//        System.out.println(" call method merge: left array" + Arrays.toString(leftArr));
+//        System.out.println(" call method merge: right array " + Arrays.toString(rightArr));
 
-        int len_1 = arr_1.length, len_2 = arr_2.length;
-        int a = 0, b = 0, len = len_1 + len_2; // a, b - counters in the arrays
+        int leftLength = leftArr.length, rightLength = rightArr.length;
+        int leftInd = 0, rightInd = 0;
+        int len = leftLength + rightLength;
+
         int[] result = new int[len];
+
         for (int i = 0; i < len; i++) {
-            if (b < len_2 && a < len_1) {
-                if (arr_1[a] > arr_2[b]) result[i] = arr_2[b++];
-                else result[i] = arr_1[a++];
-            } else if (b < len_2) {
-                result[i] = arr_2[b++];
+            if (leftInd < leftLength && rightInd < rightLength) {
+                if (leftArr[leftInd] > rightArr[rightInd]) result[i] = rightArr[rightInd++];
+                else result[i] = leftArr[leftInd++];
+            } else if (rightInd < rightLength) {
+                result[i] = rightArr[rightInd++];
             } else {
-                result[i] = arr_1[a++];
+                result[i] = leftArr[leftInd++];
             }
         }
-
-//        System.out.println(Arrays.toString(result));
+//        System.out.println("result of method merge" + Arrays.toString(result));
         return result;
     }
+
 
 
 }

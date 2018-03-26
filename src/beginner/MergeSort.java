@@ -8,11 +8,11 @@ public class MergeSort {
         int dimensionOfArray = 15;
         int[] array = SearchMinMax.createArray(dimensionOfArray);
 
-        System.out.println("Before "+ Arrays.toString(array));
+        System.out.println("Before " + Arrays.toString(array));
 
         int[] sortedArray = mergeSort(array);
 
-        System.out.println("After "+Arrays.toString(sortedArray));
+        System.out.println("After " + Arrays.toString(sortedArray));
 
     }
 
@@ -54,7 +54,4 @@ public class MergeSort {
 //        System.out.println("result of method merge" + Arrays.toString(result));
         return result;
     }
-
-
-
 }

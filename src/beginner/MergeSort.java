@@ -21,8 +21,8 @@ public class MergeSort {
         if (len < 2) return array;
         int mid = len/2;
 
-//        System.out.println(" Left "+Arrays.toString(Arrays.copyOfRange(array, 0, mid)));
-//        System.out.println(" Right "+Arrays.toString(Arrays.copyOfRange(array, mid, len)));
+//        System.out.println(" Left " + Arrays.toString(Arrays.copyOfRange(array, 0, mid)));
+//        System.out.println(" Right " + Arrays.toString(Arrays.copyOfRange(array, mid, len)));
 
         int[] leftArray = mergeSort(Arrays.copyOfRange(array, 0, mid));
         int[] rightArray = mergeSort(Arrays.copyOfRange(array, mid, len));

@@ -5,8 +5,11 @@
       <option name="auto-sync" value="true" />
     </driver>
     <driver id="h2.unified">
+      <url-template name="Remote" template="jdbc:h2:tcp://{host::localhost}[:{port::8082}]/{database::default}[;&lt;;,user={user:param},password={password:param},{:identifier}={:param}&gt;]" />
       <artifact name="H2" use="true" />
       <option name="auto-sync" value="true" />
+      <option name="auto-commit" value="true" />
+      <option name="send-app-info" value="true" />
     </driver>
     <driver id="azure.ms">
       <artifact name="SQL Server" use="true" />

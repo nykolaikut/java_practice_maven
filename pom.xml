@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ukr.education</groupId>
+    <groupId>ua.education</groupId>
     <artifactId>java_practice_maven</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <description>Simple pom project</description>
+
     <modules>
-        <module>Web</module>
         <module>Core</module>
-        <module>dao</module>
+        <module>Dao</module>
+        <module>Web</module>
+
     </modules>
 
     <properties>
-        <source-code.version>1.7</source-code.version>
-        <source-code.encoding>UTF-8</source-code.encoding>
+        <source-code.version>1.8</source-code.version>
+<!--        <source-code.encoding>UTF-8</source-code.encoding> -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
         <spring.version>5.0.2.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
 

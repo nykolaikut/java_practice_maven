@@ -10,6 +10,10 @@
           <option name="url" value="https://github.com/nykolaikut/Programm.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/nykolaikut/java_practice_maven.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\JavaProject" />

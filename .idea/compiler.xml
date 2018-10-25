@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Core" />
         <module name="Dao" />
+        <module name="dao" />
         <module name="Web" />
       </profile>
     </annotationProcessing>

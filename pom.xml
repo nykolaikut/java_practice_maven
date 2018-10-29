@@ -102,7 +102,6 @@
 
                     <executions>
                         <execution>
- <!--                           <id>compile</id> -->
                             <phase>package</phase>
                             <goals>
                                 <goal>check</goal>
@@ -122,9 +121,21 @@
                     <executions>
                         <execution>
                             <phase>package</phase>
-                            <goals><goal>check</goal></goals>
+                            <goals><goal>check</goal>
+                                <goal>cpd-check</goal>
+                            </goals>
                         </execution>
                     </executions>
+                </plugin>
+
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>findbugs-maven-plugin</artifactId>
+                    <version>3.0.5</version>
+                    <configuration>
+                        <visitors>FindDeadLocalStores,UnreadFields</visitors>
+                    </configuration>
                 </plugin>
 
             </plugins>

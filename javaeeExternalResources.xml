@@ -1,7 +1,0 @@
-<application>
-  <component name="ExternalResourceManagerImpl">
-    <ignored-resource url="http://www.puppycrawl.com/dtds/configuration_1_3.dtd" />
-    <ignored-resource url="http://www.w3.org/1998/Math/MathML" />
-    <ignored-resource url="http://www.w3.org/2000/svg" />
-  </component>
-</application>
